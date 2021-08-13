@@ -1,0 +1,50 @@
+<html lang="ja">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <style>
+            /*タグ名 {プロパティ名: 値}*/
+            header {
+                background-color: #99cc00;
+                position: fixed;
+            }
+
+            /*idプロパティとclassプロパティの特徴*/
+            /*idプロパティとclassプロパティではidプロパティの方が優先される。*/
+            /*classプロパティは複数指定できるが、idプロパティは複数指定できない。*/
+            
+            
+            /* classプロパティ */
+            /* .任意の名称 {プロパティ名: 値}*/
+            .sam {
+                color:#ff0000;
+            }
+            .bk {
+                color:#000000;
+            }
+            .bg {
+                
+            }
+            
+            /* IDプロパティの場合 */
+            /* #任意の名称 {プロパティ名: 値}*/
+            #samId {
+                color:#ff00ff;
+            }
+            
+            #sambg {
+                background-color:#ffff00;
+            }
+
+        </style>
+    </head>
+    <body>
+        <!-- コメントの書き方 -->
+        <header>テスト</header><br />
+        <font size="2" color="blue">フォントサイズ2、カラー青（色名で指定）</font><br>
+        <div id="samId">ID指定</div>
+        <div id="samId" class="sam">
+            クラスについて
+            <div class="bk bg">拝啓</div>
+        </div>
+    </body>
+</html>

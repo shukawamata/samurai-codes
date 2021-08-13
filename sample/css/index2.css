@@ -1,0 +1,32 @@
+/*タグ名 {プロパティ名: 値}*/
+header {
+    background-color: #99cc00;
+    position: fixed;
+}
+
+/*idプロパティとclassプロパティの特徴*/
+/*idプロパティとclassプロパティではidプロパティの方が優先される。*/
+/*classプロパティは複数指定できるが、idプロパティは複数指定できない。*/
+
+
+/* classプロパティ */
+/* .任意の名称 {プロパティ名: 値}*/
+.sam {
+    color:#ff0000;
+}
+.bk {
+    color:#000000;
+}
+.bg {
+    
+}
+
+/* IDプロパティの場合 */
+/* #任意の名称 {プロパティ名: 値}*/
+#samId {
+    color:#ff00ff;
+}
+
+#sambg {
+    background-color:#ffff00;
+}
