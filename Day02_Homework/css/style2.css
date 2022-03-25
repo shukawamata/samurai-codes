@@ -1,0 +1,14 @@
+@charset "utf-8";
+
+html, body {
+	height: 100%;
+	font-family: SFS, Arial, sans-serif;
+	color: #16325c;
+}
+
+div {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+}
