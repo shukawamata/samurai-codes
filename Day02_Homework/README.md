@@ -32,3 +32,9 @@
 ```
 state_btn.setAttribute("disabled", true);
 ```
+- 以下コードの最後の"/"は必要？？
+```
+<input type="submit" id="btn" />
+```
+
+
