@@ -32,7 +32,7 @@
 ```
 state_btn.setAttribute("disabled", true);
 ```
-- 以下コードの最後の"/"は必要？？
+- 以下コードの最後の"/"は必要？？何か意味があるのか...
 ```
 <input type="submit" id="btn" />
 ```
