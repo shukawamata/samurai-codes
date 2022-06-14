@@ -1,70 +1,25 @@
-# Getting Started with Create React App
+# オリジナルアプリ作成
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 持たせたい機能について
 
-## Available Scripts
+1.2つの動画を1画面で同時再生する
+2.2つの動画にコメントを紐づけて保存する
+3.紐付けた動画とコメントをファイル？のようにディレクトリ構成で管理したい。(タグをつけて分別する)
+4.ユーザ登録、ログイン機能
 
-In the project directory, you can run:
+## 進捗
 
-### `npm start`
+### 6/14
+フロントエンド側をCSSの動画を参考にしながら実装。
+Replay.jsの画面をgridで調整したいが動画のサイズを変更するところで苦戦中...
+・うまく動画のサイズが変更できない。
+・girdでサイドバー、動画のエリア、コメントのエリアと場所分けできたが、ウィンドウを小さくしたりすると崩れたりするのでmin-widthを使って対処。
+ウィンドウを小さくしても大きさを保つことができたがやり方として合っているかどうかは？
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+バックエンド側はMERNの動画を参考にしながらユーザをMongoDBに登録する機能を実装(POSTでjson形式でName,email,Passward,Passward2を登録する)、
+払い出したHashedパスワードを使用してPOSTでログインした際にユーザのメールアドレス、パスワードをjson形式で実装するところまで完了。
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+一旦フロントエンドからsubmitしてMongoDBにユーザ情報を登録できることを確認しようとしたところ、以下のエラーが発生
+Access to XMLHttpRequest at 'http://localhost:8888/api/users' from origin 'http://localhost:3000' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+調べてAccess-Control-Allow-Originの処理を追加したがエラー解消せず止まっている。書き方が悪い？？
