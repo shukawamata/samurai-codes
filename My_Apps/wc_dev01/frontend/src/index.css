@@ -1,0 +1,280 @@
+:root {
+  --primary-color: #047aed;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+ul {
+  list-style-type: none;   
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+h1,
+h2 {
+    font-weight: 300;
+    line-height: 1.2;
+    margin: 10px 0;
+}
+
+p {
+  margin: 10px 0;
+}
+
+img {
+  width: 100%;
+}
+
+/* navbar */
+.navbar {
+  background-color: var(--primary-color);
+  color: #fff;
+  height: 70px;
+}
+
+.navbar ul {
+  display: flex;
+}
+
+.navbar a {
+  color: #fff;
+  padding: 10px;
+  margin: 0 20px;
+}
+
+.navbar a:hover {
+  border-bottom: 2px #fff solid;
+}
+
+.navbar .flex {
+  justify-content: space-between;
+}
+
+/* Main */
+.main {
+  height: 400px;
+  background-color: var(--primary-color);
+  color: #fff;
+  position: relative;
+}
+
+.main h1 {
+  font-size: 40px;
+}
+
+.main p {
+  margin: 20px 0;
+}
+
+.main .grid {
+  overflow: visible;
+  grid-template-columns: 55% 45%;
+  gap: 30px;
+}
+
+.main-form {
+  position: relative;
+  top: 60px;
+  height: 350px;
+  width: 400px;
+  padding: 40px;
+  z-index: 100;
+}
+
+.main-form .form-control {
+  margin: 30px 0;
+}
+
+.main-form input[type='text'],
+.main-form input[type='text'] {
+    border: 0;
+    border-bottom: 1px solid #b4becb; 
+    width:  100%;
+}
+
+.main-form input:focus {
+  outline: none;
+}
+
+.main::before,
+.main::after {
+    content: '';
+    position: absolute;
+    height: 100px;
+    bottom: -80px;
+    right: 0;
+    left: 0;
+    background: #fff;
+    transform: skewY(-2deg);
+    -webkit-transform: skewY(-2deg);
+    -moz-transform: skewY(-2deg);
+    -ms-transform: skewY(-2deg);
+}
+/* Login */
+.login-form {
+  position: relative;
+  top: 60px;
+  height: 300px;
+  width: 400px;
+  padding: 40px;
+  z-index: 100;
+}
+
+.login-form .form-control {
+  margin: 15px 0;
+}
+
+.login-form input[type='text'],
+.login-form input[type='email'],
+.login-form input[type='password'],
+.login-form input[type='password2'] {
+    border: 0;
+    border-bottom: 1px solid #b4becb; 
+    width:  100%;
+}
+
+.login-form input:focus {
+  outline: none;
+}
+
+/* Register */
+.register-form {
+  position: relative;
+  top: 60px;
+  height: 430px;
+  width: 400px;
+  padding: 40px;
+  z-index: 100;
+}
+
+.register-form .form-control {
+  margin: 15px 0;
+}
+
+.register-form input[type='text'],
+.register-form input[type='email'],
+.register-form input[type='password'],
+.register-form input[type='password2'] {
+    border: 0;
+    border-bottom: 1px solid #b4becb; 
+    width:  100%;
+}
+
+.register-form input:focus {
+  outline: none;
+}
+
+/* Replays */
+.container_replay {
+  display: grid;
+  grid-template-columns: 1fr 4fr; 
+  grid-template-rows: 600px 50px 200px;
+}
+
+.side-bar {
+  background-color: chartreuse;
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 1;
+  grid-row-end: 4;
+  min-width: 100%;
+}
+
+.video-contents {
+  background-color: red;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2; 
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.form-label {
+  background-color: blue;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.form-comment {
+  background-color: cadetblue;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+/* Utilities */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  overflow: auto;
+  padding: 0 40px;
+}
+
+.card {
+  background-color: #fff;
+  color: #333;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 1);
+  padding: 20px;
+  margin: 10px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 30px;
+  cursor: pointer;
+  background: var(--primary-color);
+  color: #fff;
+  border: #fff;
+  border-radius: 5px;
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 1px #fff solid;
+}
+
+.btn:hover {
+  transform: scale(0.9);
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr; 
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.grid_login_register {
+  overflow: visible;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
