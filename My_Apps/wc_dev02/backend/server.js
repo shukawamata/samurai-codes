@@ -21,7 +21,7 @@ app.use('/api/users', require('./routes/userRoutes'))
 
 //アップロード
 app.use('/api/posts', require('./routes/postRoutes'));
-app.use("/uploads", express.static("/uploads"));
+app.use("/upload", express.static("./uploads"));
 
 //エラーハンドリング
 app.use(errorHandler)
