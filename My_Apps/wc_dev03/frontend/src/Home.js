@@ -17,7 +17,7 @@ const createPost = () => {
     data.append("images", file1);
     data.append("images", file2);
 
-    axios.post("http://localhost:8080/api", data).then((res) => {
+    axios.get("http://localhost:8080/api/posts", data).then((res) => {
         console.log(res);
     }).catch(err => {
         console.log(err);
