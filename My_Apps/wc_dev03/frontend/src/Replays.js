@@ -18,8 +18,7 @@ const Replays = () => {
     return (a.createdAt > b.createdAt) ? -1 : 1;
   }); 
 
-  console.log(result)
-  console.log(result[0].images[0].name)
+  // console.log(result[0].images[0].name)
 
   return (
     <section>
