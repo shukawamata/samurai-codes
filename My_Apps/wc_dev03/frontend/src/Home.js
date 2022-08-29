@@ -11,13 +11,14 @@ const Home = () => {
     // const ref1 = useRef();
     // const ref2 = useRef();
 
-const createPost = () => {
+const createPost = (e) => {
+    e.preventDefault();
     const data = new FormData();
     data.append("item_name", item_name);
-    data.append("images", file1);
-    data.append("images", file2);
+    data.append("file1", file1);
+    data.append("file2", file2);
 
-    axios.get("http://localhost:8080/api/posts", data).then((res) => {
+    axios.post("http://localhost:8080/api/posts", data).then((res) => {
         console.log(res);
     }).catch(err => {
         console.log(err);
