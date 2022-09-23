@@ -1,13 +1,16 @@
 import React from 'react'
-// import { slide as Menu } from 'react-burger-menu';
+import { slide as Menu } from 'react-burger-menu';
 
 const Sidebar = () => {
   return (
+    <Menu className="side-bar">
       <div>
-        <div className="side-bar">
-          Sidebar
-        </div>
+        <h1>Replays</h1>
       </div>
+        <a>
+          Test_item01
+        </a>
+    </Menu>
   );
 };
 

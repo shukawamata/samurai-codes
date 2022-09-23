@@ -7,6 +7,8 @@ const Home = () => {
     const [file1, setFile1] = useState(null);
     const [file2, setFile2] = useState(null);
     const [item_name, setItem_name] = useState("");
+    const navigate = useNavigate();
+
     // const [posts, setPosts] = useState([]);
     // const ref1 = useRef();
     // const ref2 = useRef();
@@ -20,6 +22,7 @@ const createPost = (e) => {
 
     axios.post("http://localhost:8080/api/posts", data).then((res) => {
         console.log(res);
+        navigate("/replays");
     }).catch(err => {
         console.log(err);
     });

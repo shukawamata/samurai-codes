@@ -4,7 +4,7 @@ const Items = () => {
   return (
     <form className='container_item card'>
         <div className="item-title">
-          <h3>Tilte: test</h3>
+          <h3>Item_name: test</h3>
         </div>
         <div className="container_form ">
               <textarea className="comments" rows="10" cols="60"></textarea>

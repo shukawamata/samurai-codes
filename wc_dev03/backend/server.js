@@ -17,6 +17,6 @@ app.get("/api", (req, res) => {
 });
 
 connectDB()
-app.listen(8080, () => {
+app.listen(5555, () => {
     console.log("Server started");
   });
