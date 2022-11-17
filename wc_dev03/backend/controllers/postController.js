@@ -46,3 +46,8 @@ export const getPosts = async (req, res) => {
   const posts = await Post.find({}).populate("images");
   res.status(200).json(posts);
 };
+
+export const getPost = async (req, res) => {
+  const post = await Post.findById(req.params.post_id).populate("images");
+  res.status(200).json(post);
+};
